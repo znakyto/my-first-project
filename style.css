@@ -30,7 +30,14 @@ h2 {
 .col-4 {
   text-align: center;
 }
-
+.row-cols-auto {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px 0 auto;
+  width: 15%;
+}
 .card-group {
   margin-top: 15px;
   text-align: center;
