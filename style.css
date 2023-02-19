@@ -1,0 +1,60 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: white;
+  min-height: 100vh;
+}
+form {
+  margin: 0 auto;
+  width: 100%;
+}
+h1,
+h2 {
+  text-shadow: 2px 2px 2px rgb(33, 39, 26);
+  padding: 0 0 10px 0;
+}
+.row-top {
+  margin: -15px;
+}
+.newcity {
+  margin-top: 15px;
+  padding: 5px;
+  text-align: right;
+}
+.main-image {
+  width: 200px;
+  margin: 0 10px 20px 0;
+  padding: 5px;
+  text-align: right;
+}
+.col-4 {
+  text-align: center;
+}
+
+.card-group {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px 0 auto;
+  width: 15%%;
+}
+.card {
+  line-height: 50px;
+  background: linear-gradient(
+    178deg,
+    rgba(201, 234, 252, 0.51) 14.9%,
+    rgba(139, 192, 216, 0.73) 80%
+  );
+  padding: 5px;
+  margin: 10px;
+  border-color: aquamarine;
+  border-style: groove;
+}
+.card-text {
+  text-shadow: 2px 2px 2px rgb(33, 39, 26);
+  padding: 0 0 10px 0;
+}
+.row {
+  display: grid;
+}
