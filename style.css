@@ -60,5 +60,7 @@ h2 {
 }
 .githubLink {
   font-size: smaller;
+  font-weight: 200;
   padding: 10px auto;
+  margin: 10px;
 }
