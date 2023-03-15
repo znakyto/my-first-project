@@ -3,6 +3,8 @@ body {
   background: linear-gradient(to top, #09203f 0%, #537895 100%);
   color: white;
   min-height: 100vh;
+  max-width: fit-content;
+  display: block;
 }
 form {
   margin: 0 auto;
@@ -21,14 +23,23 @@ h2 {
   padding: 5px;
   text-align: right;
 }
-#main-image {
-  max-width: 50%;
+#mainImage {
+  max-width: 30%;
   height: auto;
   margin: 0 10px 20px 0;
   padding: 5px;
 }
-.col-4 {
-  text-align: center;
+#data {
+  padding: 5px;
+  font-size: 28px;
+}
+span,
+#tempFahrenheit,
+#tempCelsius {
+  font-size: 32px;
+}
+.col-6 {
+  text-align: left;
 }
 form .blockofCards {
   margin-top: 15px;
@@ -55,9 +66,7 @@ form .blockofCards {
   text-shadow: 2px 2px 2px rgb(33, 39, 26);
   padding: 0 0 10px 0;
 }
-.row {
-  display: block;
-}
+
 .githubLink {
   font-size: smaller;
   font-weight: 200;

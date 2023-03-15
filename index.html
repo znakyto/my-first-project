@@ -27,27 +27,33 @@
             autofocus="on"
           />
           <input type="submit" value="Search" />
-          <input type="button" value="Current" id="current" />
         </form>
       </div>
       <form>
-        <div class="row">
-          <div class="col">
-            <h1 id="maincitySearch">Vienna, Austria</h1>
-            <h2>Sunday, 22/01/2023</h2>
-          </div>
+        <div class="mainCity">
+          <div class="row">
+            <div class="col-6">
+              <h1 id="maincitySearch">Vienna, Austria</h1>
+              <h2>Sunday, 22/01/2023</h2>
+              <span> <a href="#" id="tempCelsius" class="active"></a> °C</span>
+              <span>
+                <a href="#" id="tempFahrenheit" class="active"></a> / °F</span
+              >
+              <div>
+                <img
+                  src="images/partialycloudy.png"
+                  alt="cloud-sun1"
+                  id="mainImage"
+                />
+              </div>
+            </div>
 
-          <div class="main-image">
-            <img src="images/partialycloudy.png" alt="cloud-sun1" />
-          </div>
-          <div class="col">
-            <span id="temperature">1</span>
-            <span id="celsiusTemp">°C</span>
-
-            <div class="popis">
-              <div>Precipitation: 10%</div>
-              <div>Humidity: 82%</div>
-              <div>Wind: 13 km/h</div>
+            <div class="col-6" id="data">
+              <ul>
+                <li>Precipitation: 10%</li>
+                <li>Humidity: 82%</li>
+                <li>Wind: 13 km/h</li>
+              </ul>
             </div>
           </div>
         </div>
