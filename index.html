@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <div class="searchcity">
-        <form class="city">
+        <form class="city" id="search-form">
           <input
             type="text"
             name="city"
@@ -35,25 +35,20 @@
             <div class="col-6" class="weather-temperature">
               <h1 id="maincitySearch">Vienna, Austria</h1>
               <h2>Sunday, 22/01/2023</h2>
+              <h3 id="description">Clear</h3>
+              <img src="images/sunny.png" alt="sunny" id="icon" />
               <span class="units" id="temperature"></span>
-              <span> <a href="#" id="tempCelsius" class="active"></a> °C</span>
+
               <span>
-                <a href="#" id="tempFahrenheit" class="active"></a> / °F</span
-              >
-              <div>
-                <img
-                  src="images/partialycloudy.png"
-                  alt="cloud-sun1"
-                  id="mainImage"
-                />
-              </div>
+                <a href="#" id="tempCelsius" class="active">°C</a>
+                <a href="#" id="tempFahrenheit">°F</a>
+              </span>
             </div>
 
             <div class="col-6" id="data">
               <ul>
-                <li>Precipitation: 10%</li>
-                <li>Humidity: 82%</li>
-                <li>Wind: 13 km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"> </span> km/h</li>
               </ul>
             </div>
           </div>
