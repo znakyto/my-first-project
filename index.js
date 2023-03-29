@@ -72,32 +72,6 @@ function search(event) {
 
   axios.get(apiUrl).then(showTemperature);
 }
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let mainTemperature = document.querySelector("#temperature");
-
-  tempCelsius.classList.remove("active");
-  tempFahrenheit.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  mainTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  tempCelsius.classList.add("active");
-  tempFahrenheit.classList.remove("active");
-  let mainTemperature = document.querySelector("#temperature");
-  mainTemperature.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let form = document.querySelector(".searchcity");
 form.addEventListener("submit", search);
-
-let tempFahrenheit = document.querySelector("#tempFahrenheit");
-tempFahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
-let tempCelsius = document.querySelector("#tempCelsius");
-tempCelsius.addEventListener("click", displayCelsiusTemperature);
+search("Poprad");
