@@ -27,7 +27,13 @@ let now = new Date();
 let h2 = document.querySelector("h2");
 
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let date = now.getDate();
 let year = now.getFullYear();
 
@@ -35,11 +41,34 @@ let month = months[now.getMonth()];
 let day = days[now.getDay()];
 h2.innerHTML = `${day} ${month} ${date}, ${hours}: ${minutes} ${year}`;
 
-let apiKey = "017d56650cd168d68067850318775d43";
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+  forecastHTML = `
+   <div class="row">
+     <div class="col-2">
+          <div class="weather-forecast-date">Friday</div>
+                  <img
+                    src="images/partialycloudy.png"
+                    class="weather-pic"
+                    alt="weather-picture"
+                    width="100px"
+                  />
+                  
+                  <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 12° </span>
+                  </div>
+       </div>
+   </div>
+         `;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function showTemperature(response) {
   console.log(response);
-  let cityName = document.querySelector("#maincitySearch");
+  let cityName = document.querySelector("#mainCitySearch");
   cityName.innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
   let mainTemperature = document.querySelector("#temperature");
@@ -62,7 +91,7 @@ function search(event) {
   let input = document.querySelector("#city-search");
   let city = input.value;
   maincitySearch.innerHTML = `${city}`;
-
+  let apiKey = "017d56650cd168d68067850318775d43";
   let apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
@@ -72,6 +101,13 @@ function search(event) {
 
   axios.get(apiUrl).then(showTemperature);
 }
-let form = document.querySelector(".searchcity");
-form.addEventListener("submit", search);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-search");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 search("Poprad");
+displayForecast();

@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="searchcity">
+      <div class="searchCity">
         <form class="city" id="search-form">
           <input
             type="text"
@@ -29,137 +29,29 @@
           <input type="submit" value="Search" />
         </form>
       </div>
-      <form>
-        <div class="mainCity">
-          <div class="row">
-            <div class="col-6" class="weather-temperature">
-              <h1 id="maincitySearch">Vienna, Austria</h1>
-              <h2>Sunday, 22/01/2023</h2>
-              <h3 id="description">Clear</h3>
-              <img src="images/sunny.png" alt="sunny" id="icon" />
-              <span class="units" id="temperature"></span>
 
-              <span class="active">°C </span>
-            </div>
+      <div class="mainCity">
+        <div class="row">
+          <div class="col-6" class="weather-temperature">
+            <h1 id="maincitySearch">Vienna, Austria</h1>
+            <h2>Sunday, 22/01/2023</h2>
+            <h3 id="description">Clear</h3>
+            <img src="images/sunny.png" alt="sunny" id="icon" />
+            <span class="units" id="temperature"></span>
 
-            <div class="col-6" id="data">
-              <ul>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"> </span> km/h</li>
-              </ul>
-            </div>
+            <span class="active">°C </span>
+          </div>
+
+          <div class="col-6" id="data">
+            <ul>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"> </span> km/h</li>
+            </ul>
           </div>
         </div>
-      </form>
-      <form class="blockofCards">
-        <div class="row row-cols-auto">
-          <div class="card-group">
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Mon <br />
-                    23/01
-                  </h5>
-                  <img
-                    src="images/partialycloudy.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <br />
-                  <p class="card-text">-2°/-7°</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Tue <br />
-                    24/01
-                  </h5>
-                  <img
-                    src="images/partialycloudy.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <p class="card-text">-1°/-6°</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Wed <br />
-                    25/01
-                  </h5>
-                  <img
-                    src="images/snowing.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <p class="card-text">-2°/-7°</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Thu <br />
-                    26/01
-                  </h5>
-                  <img
-                    src="images/snowing.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <p class="card-text">-1°/-6°</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Fri <br />
-                    27/01
-                  </h5>
-                  <img
-                    src="images/sunny.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <p class="card-text">0°/-5°</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Sat <br />
-                    28/01
-                  </h5>
-                  <img
-                    src="images/snowing.png"
-                    class="weather-pic"
-                    alt="weather-picture"
-                    width="100px"
-                  />
-                  <p class="card-text">-1°/-5°</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
+      </div>
+
+      <div class="weather-forecast" id="forecast"></div>
     </div>
 
     <small class="githubLink">
